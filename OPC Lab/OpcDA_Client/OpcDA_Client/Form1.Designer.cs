@@ -52,18 +52,27 @@
             // 
             // fTherm
             // 
-            this.fTherm.Location = new System.Drawing.Point(126, 28);
+            this.fTherm.Location = new System.Drawing.Point(252, 54);
+            this.fTherm.Margin = new System.Windows.Forms.Padding(6);
             this.fTherm.Name = "fTherm";
-            this.fTherm.Size = new System.Drawing.Size(97, 325);
+            this.fTherm.Size = new System.Drawing.Size(194, 625);
             this.fTherm.TabIndex = 0;
             // 
             // tempGraph
             // 
-            this.tempGraph.Location = new System.Drawing.Point(21, 28);
+            this.tempGraph.InteractionMode = ((NationalInstruments.UI.GraphInteractionModes)((((((((NationalInstruments.UI.GraphInteractionModes.ZoomX | NationalInstruments.UI.GraphInteractionModes.ZoomY) 
+            | NationalInstruments.UI.GraphInteractionModes.ZoomAroundPoint) 
+            | NationalInstruments.UI.GraphInteractionModes.PanX) 
+            | NationalInstruments.UI.GraphInteractionModes.PanY) 
+            | NationalInstruments.UI.GraphInteractionModes.DragCursor) 
+            | NationalInstruments.UI.GraphInteractionModes.DragAnnotationCaption) 
+            | NationalInstruments.UI.GraphInteractionModes.EditRange)));
+            this.tempGraph.Location = new System.Drawing.Point(42, 54);
+            this.tempGraph.Margin = new System.Windows.Forms.Padding(6);
             this.tempGraph.Name = "tempGraph";
             this.tempGraph.Plots.AddRange(new NationalInstruments.UI.WaveformPlot[] {
             this.waveformPlot1});
-            this.tempGraph.Size = new System.Drawing.Size(405, 313);
+            this.tempGraph.Size = new System.Drawing.Size(810, 602);
             this.tempGraph.TabIndex = 1;
             this.tempGraph.UseColorGenerator = true;
             this.tempGraph.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
@@ -73,22 +82,30 @@
             // 
             // waveformPlot1
             // 
+            this.waveformPlot1.CanScaleYAxis = false;
+            this.waveformPlot1.HistoryCapacity = 100;
             this.waveformPlot1.XAxis = this.xAxis1;
             this.waveformPlot1.YAxis = this.yAxis1;
             // 
+            // yAxis1
+            // 
+            this.yAxis1.Range = new NationalInstruments.UI.Range(10D, 50D);
+            // 
             // cTherm
             // 
-            this.cTherm.Location = new System.Drawing.Point(23, 28);
+            this.cTherm.Location = new System.Drawing.Point(46, 54);
+            this.cTherm.Margin = new System.Windows.Forms.Padding(6);
             this.cTherm.Name = "cTherm";
-            this.cTherm.Size = new System.Drawing.Size(97, 325);
+            this.cTherm.Size = new System.Drawing.Size(194, 625);
             this.cTherm.TabIndex = 2;
             // 
             // opcUrlTxt
             // 
             this.opcUrlTxt.AccessibleName = "";
-            this.opcUrlTxt.Location = new System.Drawing.Point(27, 382);
+            this.opcUrlTxt.Location = new System.Drawing.Point(54, 735);
+            this.opcUrlTxt.Margin = new System.Windows.Forms.Padding(6);
             this.opcUrlTxt.Name = "opcUrlTxt";
-            this.opcUrlTxt.Size = new System.Drawing.Size(324, 20);
+            this.opcUrlTxt.Size = new System.Drawing.Size(644, 31);
             this.opcUrlTxt.TabIndex = 3;
             this.opcUrlTxt.Tag = "";
             this.opcUrlTxt.Text = "opc://localhost/Matrikon.OPC.Simulation.1/Bucket Brigade.Real4";
@@ -96,9 +113,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tempGraph);
-            this.groupBox1.Location = new System.Drawing.Point(244, 4);
+            this.groupBox1.Location = new System.Drawing.Point(488, 8);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(449, 359);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox1.Size = new System.Drawing.Size(898, 690);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Graph - Celsius";
@@ -109,9 +128,11 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cTherm);
             this.groupBox2.Controls.Add(this.fTherm);
-            this.groupBox2.Location = new System.Drawing.Point(9, 4);
+            this.groupBox2.Location = new System.Drawing.Point(18, 8);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(225, 359);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox2.Size = new System.Drawing.Size(450, 690);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Temperature";
@@ -119,35 +140,39 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(165, 16);
+            this.label3.Location = new System.Drawing.Point(330, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 13);
+            this.label3.Size = new System.Drawing.Size(33, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "°F";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 16);
+            this.label2.Location = new System.Drawing.Point(126, 31);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.Size = new System.Drawing.Size(35, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "°C";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 366);
+            this.label1.Location = new System.Drawing.Point(48, 704);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(105, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Opc URL:";
             // 
             // connectBtn
             // 
-            this.connectBtn.Location = new System.Drawing.Point(27, 411);
+            this.connectBtn.Location = new System.Drawing.Point(54, 790);
+            this.connectBtn.Margin = new System.Windows.Forms.Padding(6);
             this.connectBtn.Name = "connectBtn";
-            this.connectBtn.Size = new System.Drawing.Size(125, 30);
+            this.connectBtn.Size = new System.Drawing.Size(250, 58);
             this.connectBtn.TabIndex = 7;
             this.connectBtn.Text = "Connect";
             this.connectBtn.UseVisualStyleBackColor = true;
@@ -159,14 +184,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 453);
+            this.ClientSize = new System.Drawing.Size(1404, 871);
             this.Controls.Add(this.connectBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.opcUrlTxt);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "OPC DA Client";
             ((System.ComponentModel.ISupportInitialize)(this.fTherm)).EndInit();

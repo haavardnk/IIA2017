@@ -50,5 +50,6 @@ namespace OpcDA_Client
             }
             tempGraph.PlotYAppend(cTherm.Value);
         }
+
     }
 }
